@@ -1,0 +1,217 @@
+@font-face {
+    font-family: hanken;
+    src: url('assets/fonts/HankenGrotesk-VariableFont_wght.ttf');
+}
+*{
+    font-family: hanken;
+}
+:root{
+    /* PRIMARY */
+    --Lightred: hsla(0, 100%, 67%);
+    --Orangeyyellow: hsl(39, 100%, 56%);
+    --Greenteal: hsl(166, 100%, 37%);
+    --Cobaltblue: hsl(234, 85%, 45%);
+
+    /* GRADIENT */
+    --Lightslateblue: hsl(252, 100%, 67%);/*background*/
+    --Lightroyalblue: hsl(241, 81%, 54%);/*background*/
+    --Violetblue: hsla(256, 72%, 46%, 1);/*circle*/
+    --Persianblue: hsla(241, 72%, 46%, 0);/*circle*/
+    
+    /* NEUTRAL */
+    --White: hsl(0, 0%, 100%);
+    --Paleblue: hsl(221, 100%, 96%);
+    --Lightlavender: hsl(241, 100%, 89%);
+    --Darkgrayblue: hsl(224, 30%, 27%);
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(225, 225, 225);
+}
+
+.main-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-container{
+    display: flex;
+    background-color: var(--White);
+    border-radius: 15px;
+    
+}
+
+.result-box{
+    background-image: linear-gradient(var(--Lightslateblue),var(--Lightroyalblue));
+    border-radius: 15px;
+    width: 50%;
+}
+.result-header, .circle, .result-message, .result-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.result-header label{
+    color: var(--Lightlavender);
+    font-size: 25px;
+}
+.circle-container{
+    display: grid;
+    place-content: center;
+}
+.circle{
+    height: 200px;
+    width: 200px;
+    border-radius: 100%;
+    background-image: linear-gradient(var(--Violetblue),var(--Persianblue)); 
+}
+.circle-text{
+    display: grid;
+}
+.circle-text label{
+    font-size: 60px;
+    color: var(--White);
+    display: grid;
+    place-content: center;
+    font-weight: 700;
+}
+.circle-text p{
+    color: var(--Lightlavender);
+    display: grid;
+    place-content: center;
+    margin: 0px;
+}
+.result-message label{
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--White);
+}
+.result-text{
+    display: grid;
+    place-content: center;
+    text-align: center;
+}
+.result-text p{
+    color: var(--White);
+    font-size: 15px;
+    font-weight: 200;
+    margin: 0px;
+}
+.result-information{
+    display: grid;
+    place-content: center;
+    margin: 20px;
+}
+
+.summary-box{
+    display: grid;
+    width: 50%;
+}
+.summary-information{
+    margin: 20px;
+    display: grid;
+    height: auto;
+}
+.summary-header{
+   
+}
+.summary-header label{
+    color: var(--Darkgrayblue);
+    font-size: 25px;
+}
+.summary-result{
+    display: flex;
+}
+.reaction,.memory, .verbal, .visual{
+    height: 50px;
+    margin: 15px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    padding: 0px 10px;
+}
+
+.reaction{
+    background-color: hsla(0, 100%, 67%,0.3);
+    
+}
+.reaction label{
+    color: var(--Lightred);
+    font-weight: 400;
+    
+}
+.memory{
+    background-color: hsl(39, 100%, 56%,0.3);
+}
+.memory label{
+    color: var(--Orangeyyellow);
+    font-weight: 400;
+}
+.verbal{
+    background-color: hsl(166, 100%, 37%, 0.3) ;
+}
+.verbal label{
+    color: var(--Greenteal);
+    font-weight: 400;
+}
+.visual{
+    background-color: hsl(234, 85%, 45%, 0.3);
+}
+.visual label{
+    color: var(--Cobaltblue);
+    font-weight: 400;
+}
+.score{
+    font-weight: 700;
+}
+.over-100{
+    color: var(--Darkgrayblue);
+}
+.right{
+    display: flex;
+}
+.left{
+    display: flex;
+    
+    
+}
+
+.button-holder{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button-holder button{
+    background-color: var(--Darkgrayblue);
+    color: var(--White);
+    border: none;
+    width: 100%;
+    height: 50px;
+    border-radius: 25px;
+    font-size: 18px;
+}
+.button-holder button:hover{
+    background-image: linear-gradient(var(--Lightslateblue),var(--Lightroyalblue));
+}
+
+
+@media screen and (max-width: 992px) {
+    .main-container{
+        display: block;
+    }
+    .result-box{
+        width: 100%
+    }
+    .result-information{
+        margin-top:0px
+    }
+    .summary-box{
+        width:100%
+    }
+}
